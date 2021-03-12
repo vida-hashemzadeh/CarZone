@@ -5,7 +5,7 @@ from django.utils.html import format_html
 
 class TeamAdmin(admin.ModelAdmin):
     def Imageteam (self,object):
-        return format_html('<img src="{}" width="50" style="border-radius: 50%;" />'.format(object.photo.url))
+        return format_html('<img src="{}" width="50" style="border-radius: 50%;" />'.format(object.photo))
 
     Imageteam.short_description = "Image"
 
