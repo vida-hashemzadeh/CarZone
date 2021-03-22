@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% block title_site%} | {{one_car.car_title}} {% endblock %}
+
 {%block content %}
 {% load humanize %}
 <!-- Sub banner start -->
@@ -39,27 +41,27 @@
                         <div class="carousel-inner">
                             {% if one_car.car_photo %}
                             <div class="active item carousel-item" data-slide-number="0">
-                                <img src="{{one_car.car_photo}}" class="img-fluid" alt="slider-car">
+                                <img src="{{one_car.car_photo.url}}" class="img-fluid" alt="slider-car">
                             </div>
                             {% endif %}
                             {% if one_car.car_photo_1 %}
                             <div class="item carousel-item" data-slide-number="1">
-                                <img src="{{one_car.car_photo_1}}" class="img-fluid" alt="slider-car">
+                                <img src="{{one_car.car_photo_1.url}}" class="img-fluid" alt="slider-car">
                             </div>
                             {% endif %}
                             {% if one_car.car_photo_2 %}
                             <div class="item carousel-item" data-slide-number="2">
-                                <img src="{{one_car.car_photo_2}}" class="img-fluid" alt="slider-car">
+                                <img src="{{one_car.car_photo_2.url}}" class="img-fluid" alt="slider-car">
                             </div>
                             {% endif %}
                             {% if one_car.car_photo_3 %}
                             <div class="item carousel-item" data-slide-number="4">
-                                <img src="{{one_car.car_photo_3}}" class="img-fluid" alt="slider-car">
+                                <img src="{{one_car.car_photo_3.url}}" class="img-fluid" alt="slider-car">
                             </div>
                             {% endif %}
                             {% if one_car.car_photo_4 %}
                             <div class="item carousel-item" data-slide-number="5">
-                                <img src="{{one_car.car_photo_4}}" class="img-fluid" alt="slider-car">
+                                <img src="{{one_car.car_photo_4.url}}" class="img-fluid" alt="slider-car">
                             </div>
                             {% endif %}
                         </div>
@@ -69,35 +71,35 @@
                               {% if one_car.car_photo %}
                                 <li class="list-inline-item active">
                                     <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#carDetailsSlider">
-                                        <img src="{{one_car.car_photo}}" class="img-fluid" alt="small-car">
+                                        <img src="{{one_car.car_photo.url}}" class="img-fluid" alt="small-car">
                                     </a>
                                 </li>
                                 {% endif %}
                                 {% if one_car.car_photo_1 %}
                                 <li class="list-inline-item">
                                     <a id="carousel-selector-1" data-slide-to="1" data-target="#carDetailsSlider">
-                                        <img src="{{one_car.car_photo_1}}" class="img-fluid" alt="small-car">
+                                        <img src="{{one_car.car_photo_1.url}}" class="img-fluid" alt="small-car">
                                     </a>
                                 </li>
                                 {% endif%}
                                 {% if one_car.car_photo_2 %}
                                 <li class="list-inline-item">
                                     <a id="carousel-selector-2" data-slide-to="2" data-target="#carDetailsSlider">
-                                        <img src="{{one_car.car_photo_2}}" class="img-fluid" alt="small-car">
+                                        <img src="{{one_car.car_photo_2.url}}" class="img-fluid" alt="small-car">
                                     </a>
                                 </li>
                                 {% endif%}
                                 {% if one_car.car_photo_3 %}
                                 <li class="list-inline-item">
                                     <a id="carousel-selector-3" data-slide-to="3" data-target="#carDetailsSlider">
-                                        <img src="{{one_car.car_photo_3}}" class="img-fluid" alt="small-car">
+                                        <img src="{{one_car.car_photo_3.url}}" class="img-fluid" alt="small-car">
                                     </a>
                                 </li>
                                 {% endif%}
                                 {% if one_car.car_photo_4 %}
                                 <li class="list-inline-item">
                                     <a id="carousel-selector-4" data-slide-to="4" data-target="#carDetailsSlider">
-                                        <img src="{{one_car.car_photo_4}}" class="img-fluid" alt="small-car">
+                                        <img src="{{one_car.car_photo_4.url}}" class="img-fluid" alt="small-car">
                                     </a>
                                 </li>
                                 {% endif%}

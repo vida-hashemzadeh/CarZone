@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title></title>
+    <title>Car Zone {% block title_site%}  {% endblock%}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
 
@@ -44,6 +44,17 @@
 <body>
 <div class="page_loader"></div>
 
+
+<!-- <div id="full-page-search">
+    <button type="button" class="close">×</button>
+    <form action="{% url 'url_serach'%}" class="search-header">
+        <input type="search" value="" placeholder="type keyword(s) here. Eg: audi, benz etc" name='search_keyword' />
+        <button type="submit" class="btn btn-sm button-theme">Search</button>
+    </form>
+</div> -->
+
+
+
 {% include 'includes/topbar.html' %}
 
 {% include 'includes/navbar.html' %}
@@ -54,8 +65,8 @@
 <!-- Full Page Search -->
 <div id="full-page-search">
     <button type="button" class="close">×</button>
-    <form action="https://storage.googleapis.com/theme-vessel/carhouse/index.html#" class="search-header">
-        <input type="search" value="" placeholder="type keyword(s) here. Eg: audi, benz etc" />
+    <form action="{% url 'url_serach'%}" class="search-header">
+        <input type="search" value="" placeholder="type keyword(s) here. Eg: audi, benz etc" name='search_keyword' />
         <button type="submit" class="btn btn-sm button-theme">Search</button>
     </form>
 </div>
